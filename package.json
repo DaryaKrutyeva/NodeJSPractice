@@ -1,5 +1,24 @@
 {
   "dependencies": {
     "node.js": "^0.0.1-security"
-  }
+  },
+  "name": "nodejspractice",
+  "description": "Udemy NodeJS The Complete Guide practice",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaryaKrutyeva/NodeJSPractice.git"
+  },
+  "author": "Darya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DaryaKrutyeva/NodeJSPractice/issues"
+  },
+  "homepage": "https://github.com/DaryaKrutyeva/NodeJSPractice#readme"
 }
