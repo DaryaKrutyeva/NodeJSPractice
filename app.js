@@ -20,6 +20,9 @@ const server = http.createServer((req, res) => {
 
 
         });
+        //event handling architecture where I request NodeJS to perform some action and it 
+        // will offload the request to the operating system which does support multithreading
+        //never blocks code and server
         return req.on('end', () => {
             const parseBody = Buffer.concat(body).toString();
             const message = parseBody.split('=')[1];
@@ -45,3 +48,17 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(3000);
+
+
+
+/** Some notes:
+ * - nodejs uses one thread
+ * - event loop automatically started by nodeJS, reponsible for handling event callbacks
+ *   -will only handle callbacks that contain fast finishing code
+ *   -1st checks for time callbacks(setTimeout, setInterval)
+ *    then checks pending callbacks, i-o (file, network) related that were deferred
+*    -3rd: poll phase - looks for new io events and executed callback immediately if possible or defer
+*    -4th check: setImmediate callbacks
+* -worker pool: runs on different threads, detached from code
+ *      -once worker is done, will trigger callback, which will end up in event loop where it will be executed
+ */
