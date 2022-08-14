@@ -6,7 +6,6 @@
   "description": "Udemy NodeJS The Complete Guide practice",
   "version": "1.0.0",
   "main": "app.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
@@ -20,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/DaryaKrutyeva/NodeJSPractice/issues"
   },
-  "homepage": "https://github.com/DaryaKrutyeva/NodeJSPractice#readme"
+  "homepage": "https://github.com/DaryaKrutyeva/NodeJSPractice#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
 }
